@@ -4,7 +4,7 @@
 - Source file: https://github.com/AlexTheAnalyst/MySQL-YouTube-Series/blob/main/layoffs.csv
 
 # Tools
-MySQL Workbench
+- MySQL Workbench
 
 # Lessons
 - Be ready that MySQL Workbench will upload only 400 rows insead of 2362. So, had to figure out how to create table and insert data into it using MySQL Workbench.
