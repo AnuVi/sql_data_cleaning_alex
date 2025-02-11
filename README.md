@@ -8,10 +8,15 @@
 
 # Lessons
 - Be ready that MySQL Workbench will upload only 400 rows insead of 2362. So, had to figure out how to create table and insert data into it using MySQL Workbench.
-- Although during the course seprate column, which holds row id, is added, **the biggest takaway is to:
-  - add row-id-column into the original file**
+- Although during the course seprate column, which holds row id, is added, the biggest takaway is:
+  - **add row-id-column into the original file**
   - and after that start working with the working file, because there will be a mess, and it is much easier to restore/update data.
 - Although it was SQL tutorial, in the future probably first cleaning (e.g. removing duplicates) is easier to do in Excel?
+- deleting
+  - column: ALTER TABLE table_name DROP COLUMN column_name;
+  - row: DELETE FROM table_name WHERE condition;
+  - table: DROP TABLE table_name;
+
 - Again, document while doing, because time-space doesn't helping remberging.
 
 # Steps
@@ -48,8 +53,16 @@ UPDATE layoffs_working SET country = trim(trailing '.' from country) WHERE count
 -- Finding duplicates: let's choose columns and find where the data is the same in both rows and there is more than 1 row
 
 SELECT company, total_laid_off, percentage_laid_off, industry, location, COUNT(*) as count FROM layoffs_working GROUP BY company, total_laid_off, percentage_laid_off, industry, location HAVING COUNT(*) >1;
+
+![image](https://github.com/user-attachments/assets/b69e2db8-12f5-4544-a402-33eb5d6055cd)
+![image](https://github.com/user-attachments/assets/3f5df42f-6671-4966-9bd6-aa4aa56150bf)
+
+
 ```
 
+```sql
+-- adding row_id column into the table and incremented
+```
 ```sql
 
 -- Finding rows there is no data how many people were fired.
