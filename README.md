@@ -16,7 +16,14 @@
   - column: ALTER TABLE table_name DROP COLUMN column_name;
   - row: DELETE FROM table_name WHERE condition;
   - table: DROP TABLE table_name;
-
+- ROW_NUMBER
+  - SELECT  ROW_NUMBER() OVER (ORDER column_name/PARTICION BY column_name) AS row_num, column1, column2 FROM table_name;
+  - Copilot: ROW_NUMBER is a window function in SQL that assigns a unique sequential integer to rows within a result set, starting at 1 for the first row. It can be very useful when you need to assign unique IDs to rows or when you need to sort and paginate results.
+- PARTITION BY
+  - SELECT department, employee_name, salary, AVG(salary) OVER (PARTITION BY department) AS avg_salary_per_dept, ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) AS rank_within_dept FROM 
+ employees;
+  - AVG(salary) OVER (PARTITION BY department) calculates the average salary within each department.
+  - ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) assigns a rank to each employee within their department based on their salary, with the highest salary getting rank 1.
 - Again, document while doing, because time-space doesn't helping remberging.
 
 # Steps
