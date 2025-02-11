@@ -15,10 +15,10 @@
 - Again, document while doing, because time-space doesn't helping remberging.
 
 # Steps
-'''sql
+```sql
 -- Standardizing data
 
 -- SELECT distinct(trim(company)) FROM layoffs_working;
 -- SELECT company, trim(company) FROM layoffs_working;
 -- UPDATE layoffs_working SET company = trim(company);
-'''
+```
