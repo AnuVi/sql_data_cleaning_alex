@@ -24,7 +24,7 @@
  employees;
   - AVG(salary) OVER (PARTITION BY department) calculates the average salary within each department.
   - ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) assigns a rank to each employee within their department based on their salary, with the highest salary getting rank 1.
-- Again, document while doing, because time-space doesn't helping remberging.
+- Again, document while doing, because time-space doesn't help rembembering.
 
 # Steps
 
